@@ -10,17 +10,22 @@ while True:
 
 # Fungsi untuk menentukan grade berdasarkan nilai
 def get_grade(nilai):
-    if nilai >= 90:
-        return 'A'
-    elif nilai >= 80:
-        return 'B'
-    elif nilai >= 70:
-        return 'C'
-    elif nilai >= 60:
-        return 'D'
+    if nilai == 100 :
+        return "S"
+    elif nilai <= 99 and nilai >= 85 :
+        return "A"
+    elif nilai <= 84 and nilai >= 75 :
+        return "B" 
+    elif nilai <= 74 and nilai >= 60 :
+        return "C" 
+    elif nilai <= 59 and nilai >= 50 :
+        return "D" 
+    elif nilai <= 49 and nilai >= 1 :
+        return "E"
+    elif nilai == 0 :
+        return "F"
     else:
-        return 'E'
-
+        return "Tidak Valid"
 
 # Membuat short berdasarkan Nilai Tertinggi
 short_nilai_tertinggi = sorted(data_mahasiswa, key=lambda k: k['nilai'], reverse=True)
